@@ -30,6 +30,11 @@ export default defineConfig({
     headless: true,
     screenshot: "only-on-failure",
     trace: "on-first-retry",
+
+    httpCredentials: {
+      username: "guest",
+      password: "welcome2qauto",
+    },
   },
 
   /* Configure projects for major browsers */
