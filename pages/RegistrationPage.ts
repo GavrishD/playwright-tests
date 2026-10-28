@@ -29,7 +29,7 @@ export class RegistrationPage {
   }
 
   async openRegistrationForm(): Promise<void> {
-    await this.page.goto("https://qauto.forstudy.space/");
+    await this.page.goto("/");
     await this.signInButton.click();
     await this.registrationButton.click();
   }
