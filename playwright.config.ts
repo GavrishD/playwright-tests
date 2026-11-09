@@ -41,17 +41,33 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: "chromium",
+      name: "setup",
+      testMatch: /.*\.setup\.ts/,
       use: { ...devices["Desktop Chrome"] },
     },
 
     {
+      name: "chromium",
+      testIgnore: /garage\.spec\.ts/,
+      use: { ...devices["Desktop Chrome"] },
+    },
+
+    {
+      name: "chromium-auth",
+      testMatch: /garage\.spec\.ts/,
+      use: { ...devices["Desktop Chrome"] },
+      dependencies: ["setup"],
+    },
+
+    {
       name: "firefox",
+      testIgnore: /garage\.spec\.ts/,
       use: { ...devices["Desktop Firefox"] },
     },
 
     {
       name: "webkit",
+      testIgnore: /garage\.spec\.ts/,
       use: { ...devices["Desktop Safari"] },
     },
 
