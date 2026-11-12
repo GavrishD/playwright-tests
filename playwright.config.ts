@@ -48,26 +48,26 @@ export default defineConfig({
 
     {
       name: "chromium",
-      testIgnore: /garage\.spec\.ts/,
+      testIgnore: /(garage|profile-mock|cars-api)\.spec\.ts/,
       use: { ...devices["Desktop Chrome"] },
     },
 
     {
       name: "chromium-auth",
-      testMatch: /garage\.spec\.ts/,
+      testMatch: /(garage|profile-mock|cars-api)\.spec\.ts/,
       use: { ...devices["Desktop Chrome"] },
       dependencies: ["setup"],
     },
 
     {
       name: "firefox",
-      testIgnore: /garage\.spec\.ts/,
+      testIgnore: /(garage|profile-mock|cars-api)\.spec\.ts/,
       use: { ...devices["Desktop Firefox"] },
     },
 
     {
       name: "webkit",
-      testIgnore: /garage\.spec\.ts/,
+      testIgnore: /(garage|profile-mock|cars-api)\.spec\.ts/,
       use: { ...devices["Desktop Safari"] },
     },
 
